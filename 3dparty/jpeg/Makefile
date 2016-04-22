@@ -1,2 +1,2 @@
-LIST=CPU
+#LIST=CPU
 include recurse.mk

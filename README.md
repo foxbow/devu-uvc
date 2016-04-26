@@ -1,4 +1,5 @@
-devu-uvc - USB Video Class diver for QNX 6.5/6.6 and above.
+# devu-uvc
+## USB Video Class diver for QNX 6.5/6.6 and above.
 
     The driver very precisely emulates V4L2 Linux kernel API (V4L2 core) and
 uvcvideo API for controlling extension units functionality. Therefore driver
@@ -15,7 +16,25 @@ and supports more controls and UVC variety of devices, for example, UVC analog
 video grabbers, audio inputs, etc. All features are tighted strongly with V4L2
 API.
 
-TODO: Note about sysfs.
-TODO: Note about media.
-TODO: Note about raw control read.
-TODO: Note about QNX extensions of buffer handling.
+## Platforms
+This will build the x86, x86 debug and the armlev7 variant of the driver
+
+To add a new variant use the following commands:
+```bash
+$ cd devu-uvc
+$ cd 3dparty
+$ addvariant nto <CPU> a
+$ cd ../nto
+$ addvariant <CPU> o
+$ cd ..
+$ make
+```
+With &lt;CPU&gt; being one of arm, mips, ppc, x86 (650) or arm, x86 (660)
+mips and ppc may need a-be or a-le and o-be or o-le respectively
+add -g to the variant for a debug version of the driver.
+
+## TODO
+* Note about sysfs.
+* Note about media.
+* Note about raw control read.
+* Note about QNX extensions of buffer handling.

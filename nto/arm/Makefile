@@ -1,2 +1,2 @@
-LIST=CPU
+LIST=VARIANT
 include recurse.mk

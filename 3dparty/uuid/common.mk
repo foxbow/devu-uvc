@@ -3,7 +3,8 @@ QCONFIG=qconfig.mk
 endif
 include $(QCONFIG)
 
-CCFLAGS+=-DHAVE_CONFIG_H -O3 -march=core2
+CCFLAGS+=-DHAVE_CONFIG_H -O3
+# -march=core2
 EXCLUDE_OBJS += randutils.o
 
 define PINFO
